@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dy0v8872jlfyb"]
+[gd_scene load_steps=18 format=4 uid="uid://dy0v8872jlfyb"]
 
 [ext_resource type="PackedScene" uid="uid://dscroh4yyuxie" path="res://scenes/exemples-final/hud_final.tscn" id="1_d266p"]
 [ext_resource type="Texture2D" uid="uid://3q0m2rfpv80a" path="res://assets/arriere_plans/background_neige_1.png" id="2_ao7hb"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bomh7koi041an" path="res://scenes/obstacle_verrouille.tscn" id="12_mmh6l"]
 [ext_resource type="PackedScene" uid="uid://w6tman5bqiei" path="res://scenes/killzone.tscn" id="13_ao7hb"]
 [ext_resource type="PackedScene" uid="uid://bxrgeepjetk2q" path="res://scenes/piege_apointes.tscn" id="14_tionb"]
+[ext_resource type="PackedScene" uid="uid://j5reeistl6nc" path="res://scenes/bloc_a_pointes.tscn" id="15_vkl7c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_danug"]
 size = Vector2(25, 53)
@@ -114,5 +115,11 @@ position = Vector2(352, 673)
 
 [node name="PiegeApointes3" parent="." instance=ExtResource("14_tionb")]
 position = Vector2(608, 673)
+
+[node name="BlocAPointes" parent="." instance=ExtResource("15_vkl7c")]
+position = Vector2(928, 736)
+
+[node name="BlocAPointes2" parent="." instance=ExtResource("15_vkl7c")]
+position = Vector2(1184, 736)
 
 [connection signal="body_entered" from="PorteNiveau" to="PorteNiveau" method="_on_body_entered"]
