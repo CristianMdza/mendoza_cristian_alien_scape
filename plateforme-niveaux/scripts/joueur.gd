@@ -58,3 +58,13 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+func die():
+	set_physics_process(false)
+	
+	if has_node("AnimatedSprite2D"):
+		$AnimatedSprite2D.play("mort")
+
+	await get_tree().create_timer(1.0).timeout
+	get_tree().reload_current_scene()
