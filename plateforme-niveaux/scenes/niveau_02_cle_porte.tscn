@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=4 uid="uid://dy0v8872jlfyb"]
 
 [ext_resource type="PackedScene" uid="uid://dscroh4yyuxie" path="res://scenes/exemples-final/hud_final.tscn" id="1_d266p"]
-[ext_resource type="Texture2D" uid="uid://3q0m2rfpv80a" path="res://assets/arriere_plans/background_neige_1.png" id="2_ao7hb"]
+[ext_resource type="Texture2D" uid="uid://be8r7y251ee15" path="res://assets/arriere_plans/background_glacial_mountains.png" id="2_b0jx8"]
 [ext_resource type="Script" uid="uid://bduvelojw5swt" path="res://scripts/porte_niveau.gd" id="3_ni1jg"]
 [ext_resource type="PackedScene" uid="uid://dwvq0v5nu4niq" path="res://scenes/end_game.tscn" id="4_mmh6l"]
 [ext_resource type="Texture2D" uid="uid://dcepbid2o8w4k" path="res://assets/spritesheets/spritesheet-tiles-default.png" id="5_5l8ss"]
@@ -33,9 +33,9 @@ distance = -1.0
 [node name="HUD" parent="." instance=ExtResource("1_d266p")]
 
 [node name="ArrierePlan" type="Sprite2D" parent="."]
-position = Vector2(543.812, 447.5)
-scale = Vector2(42.2567, 29.8333)
-texture = ExtResource("2_ao7hb")
+position = Vector2(544.144, 448.281)
+scale = Vector2(6.16592, 4.14554)
+texture = ExtResource("2_b0jx8")
 
 [node name="PorteNiveau" type="Area2D" parent="."]
 position = Vector2(1440, 595)

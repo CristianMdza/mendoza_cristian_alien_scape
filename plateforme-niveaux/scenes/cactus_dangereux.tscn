@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://nj4bqbn8ffph"]
+
+[ext_resource type="Script" uid="uid://cbn1tex3tc1gh" path="res://scripts/cactus_dangereux.gd" id="1_2dkr5"]
+[ext_resource type="Texture2D" uid="uid://bfj0mntb87pfh" path="res://assets/sprites/cactus.png" id="2_ylqf4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4buj0"]
+radius = 28.0
+height = 58.0
+
+[node name="CactusDangereux" type="Area2D"]
+script = ExtResource("1_2dkr5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ylqf4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 3)
+shape = SubResource("CapsuleShape2D_4buj0")
