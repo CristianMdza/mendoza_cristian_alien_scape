@@ -1,12 +1,14 @@
 class_name Joueur
 extends CharacterBody2D
 
+# --- CONSTANTES DE DÉPLACEMENT ---
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 const glisser_mur_mod = 0.15
 
 @export var etat_courant = Etat.REPOS
 
+# --- ÉTATS DU JOUEUR ---
 enum Etat {
 	REPOS,
 	PROMENER,
@@ -14,8 +16,10 @@ enum Etat {
 	GLISSE_MUR
 }
 
+# --- LA PHYSIQUE DU JOUEUR ---
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	
+	# GRAVITÉ.
 	if not is_on_floor():
 		if is_on_wall() and velocity.y > 0:
 			etat_courant = Etat.GLISSE_MUR
@@ -55,10 +59,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+		
 	move_and_slide()
 
-
+# --- MORT DU JOUEUR ---
 func die():
 	# Désactive les contrôles du joueur.
 	set_physics_process(false)

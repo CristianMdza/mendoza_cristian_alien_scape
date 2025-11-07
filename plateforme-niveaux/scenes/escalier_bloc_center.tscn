@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3amoeyy6kjry"]
+
+[ext_resource type="Script" uid="uid://dydullos6t7q4" path="res://scripts/escalier_bloc_center.gd" id="1_fijtl"]
+[ext_resource type="Texture2D" uid="uid://bv421jj5pfrih" path="res://assets/sprites/ladder_middle.png" id="2_0hdcu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wpso"]
+size = Vector2(64, 64)
+
+[node name="EscalierBlocCenter" type="Area2D"]
+script = ExtResource("1_fijtl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_0hdcu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3wpso")

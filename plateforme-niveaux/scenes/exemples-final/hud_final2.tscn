@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://bp6ccapebieia"]
+
+[ext_resource type="Texture2D" uid="uid://dlxmxeq660paq" path="res://assets/sprites/hud_heart.png" id="2_7xp3i"]
+[ext_resource type="AudioStream" uid="uid://fbu6ptr8ejdr" path="res://assets/sounds/sfx_coin.ogg" id="3_2agou"]
+
+[sub_resource type="GDScript" id="GDScript_55y4q"]
+script/source = "extends CanvasLayer
+
+func _ready() -> void:
+	%CoeursLabel.text = str(Main.coeurs)
+	Main.coeur_collectee.connect(retroaction_coeur)	
+
+func retroaction_coeur(valeur_monnaies):
+	%CoeursLabel.text = str(valeur_coeurs)
+	%CoeursSFX.play()
+"
+
+[sub_resource type="SystemFont" id="SystemFont_2qvlb"]
+font_names = PackedStringArray("Roboto")
+font_weight = 900
+subpixel_positioning = 0
+multichannel_signed_distance_field = true
+
+[node name="HUD" type="CanvasLayer"]
+script = SubResource("GDScript_55y4q")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_direction = 2
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 64.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="CoeurIcon" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("2_7xp3i")
+
+[node name="CoeursLabel" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = SubResource("SystemFont_2qvlb")
+theme_override_font_sizes/font_size = 44
+text = "0"
+vertical_alignment = 1
+
+[node name="CoeursSFX" type="AudioStreamPlayer" parent="HBoxContainer"]
+unique_name_in_owner = true
+stream = ExtResource("3_2agou")
+volume_db = -6.0

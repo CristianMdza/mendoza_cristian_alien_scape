@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfm584yuinhlj"]
+
+[ext_resource type="Texture2D" uid="uid://bojdbdx5utfx1" path="res://assets/sprites/heart.png" id="2_au0ug"]
+[ext_resource type="AudioStream" uid="uid://bxkuu13vaw0qi" path="res://assets/sounds/sfx_gem.ogg" id="3_13ajb"]
+
+[sub_resource type="GDScript" id="GDScript_3qvuy"]
+script/source = "extends Area2D
+
+func _ready() -> void:
+	body_entered.connect(coeur_touchee)
+	
+func coeur_touchee(body):
+	if body is Joueur:
+		Main.augmenter_coeurs()
+		call_deferred(\"queue_free\")
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tjt8r"]
+radius = 14.0
+
+[node name="CoeurRouge" type="Area2D"]
+script = SubResource("GDScript_3qvuy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_au0ug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tjt8r")
+
+[node name="CleSfx" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_13ajb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

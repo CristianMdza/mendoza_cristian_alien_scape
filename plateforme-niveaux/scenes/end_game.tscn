@@ -21,7 +21,7 @@ offset_top = -11.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "End Game"
+text = "Fin de partie"
 horizontal_alignment = 1
 
 [node name="HUD" parent="." instance=ExtResource("1_uwdrl")]

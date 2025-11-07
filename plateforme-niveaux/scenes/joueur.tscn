@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dirydc1jhbrdb"]
+[gd_scene load_steps=14 format=3 uid="uid://dirydc1jhbrdb"]
 
 [ext_resource type="Texture2D" uid="uid://b8rri5a137hlb" path="res://assets/spritesheets/spritesheet-characters-default.png" id="1_r36ky"]
 [ext_resource type="Script" uid="uid://c6f6th35eu1tn" path="res://scripts/joueur.gd" id="1_uj1k6"]
@@ -7,6 +7,14 @@
 [sub_resource type="AtlasTexture" id="AtlasTexture_uj1k6"]
 atlas = ExtResource("1_r36ky")
 region = Rect2(0, 896, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dga13"]
+atlas = ExtResource("1_r36ky")
+region = Rect2(0, 896, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqscv"]
+atlas = ExtResource("1_r36ky")
+region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ivebw"]
 atlas = ExtResource("1_r36ky")
@@ -36,6 +44,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"glisser_mur",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dga13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqscv")
+}],
+"loop": true,
+"name": &"monter_et_descendre",
 "speed": 5.0
 }, {
 "frames": [{
@@ -77,15 +96,17 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uj1k6"]
 size = Vector2(39, 74)
 
-[node name="Joueur" type="CharacterBody2D" groups=["Player", "joueur"]]
+[node name="Joueur" type="CharacterBody2D" groups=["joueur"]]
 script = ExtResource("1_uj1k6")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Player", "joueur"]]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["joueur"]]
 position = Vector2(0, -64)
 sprite_frames = SubResource("SpriteFrames_q5har")
-animation = &"glisser_mur"
+animation = &"monter_et_descendre"
+frame = 1
+frame_progress = 0.0841582
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player", "joueur"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["joueur"]]
 position = Vector2(-0.5, -44)
 shape = SubResource("RectangleShape2D_uj1k6")
 
