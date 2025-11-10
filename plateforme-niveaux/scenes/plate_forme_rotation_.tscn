@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cipo5vtyms681"]
+
+[ext_resource type="Script" uid="uid://b8ukh5oh5j6v5" path="res://scripts/plate_forme_rotation_.gd" id="1_73c5u"]
+[ext_resource type="Texture2D" uid="uid://bq3bpyb0bnkhb" path="res://assets/sprites/terrain_stone_cloud_left.png" id="2_6mjuv"]
+[ext_resource type="Texture2D" uid="uid://dmtfsh0l6mggx" path="res://assets/sprites/terrain_stone_cloud_right.png" id="3_qh41t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uh8x3"]
+size = Vector2(120, 44)
+
+[node name="PlateFormeRotation" type="Node2D"]
+script = ExtResource("1_73c5u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-32, 0)
+texture = ExtResource("2_6mjuv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(32, 0)
+texture = ExtResource("3_qh41t")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_uh8x3")

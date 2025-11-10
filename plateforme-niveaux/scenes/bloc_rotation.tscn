@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://mlrpn8ud0ps1"]
+
+[ext_resource type="Script" uid="uid://c5kajc2r546v3" path="res://scripts/bloc_rotation.gd" id="1_fjxte"]
+[ext_resource type="Texture2D" uid="uid://b48w2wibo1t2u" path="res://assets/sprites/bridge.png" id="2_w14kf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uh8x3"]
+size = Vector2(56, 26)
+
+[node name="BlocRotation" type="Node2D"]
+script = ExtResource("1_fjxte")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_w14kf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_uh8x3")

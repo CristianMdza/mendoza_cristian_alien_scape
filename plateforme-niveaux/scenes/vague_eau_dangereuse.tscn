@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://l2g1w3wsaljd"]
+
+[ext_resource type="Script" uid="uid://cmslljl4yra2j" path="res://scripts/vague_eau_dangereuse.gd" id="1_u5bc4"]
+[ext_resource type="Texture2D" uid="uid://ic072pprpgbp" path="res://assets/sprites/water_top.png" id="2_a7nj0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3o7a"]
+size = Vector2(64, 52)
+
+[node name="VagueEauDangereuse" type="Area2D"]
+script = ExtResource("1_u5bc4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_a7nj0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_e3o7a")

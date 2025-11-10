@@ -47,22 +47,28 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.flip_h = false
 	if velocity.x < 0:
 		$AnimatedSprite2D.flip_h = true
-	
-	
+		
+	# Handle jump.
+	if Input.is_action_just_pressed("sauter") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+		if has_node("JumpSfx"):
+			$JumpSfx.play()
+
+	# Get the input direction and handle the movement/deceleration.
+	var direction := Input.get_axis("promener_gauche", "promener_droite")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
 # Applique la physique
 	move_and_slide()
 
 # MORT DU JOUEUR
 func die():
-	# Désactive les contrôles du joueur.
 	set_physics_process(false)
-	
-	# Joue une animation de mort si le joueur en as une.
 	if has_node("AnimatedSprite2D"):
 		$AnimatedSprite2D.play("mort")
-	
-	# Petit délai avant de redémarrer le niveau.
 	await get_tree().create_timer(1.0).timeout
-	
-	# Recharge la scène actuelle (fait "réapparaître" le joueur).
-	get_tree().reload_current_scene()
+	if get_tree() and get_tree().current_scene:
+		get_tree().reload_current_scene()
