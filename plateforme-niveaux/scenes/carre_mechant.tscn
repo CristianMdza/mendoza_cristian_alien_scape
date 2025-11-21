@@ -1,0 +1,67 @@
+[gd_scene load_steps=13 format=3 uid="uid://cfd48ovep5vaj"]
+
+[ext_resource type="Script" uid="uid://6gk2tcb4qsqp" path="res://scripts/carre_mechant.gd" id="1_ey03i"]
+[ext_resource type="Texture2D" uid="uid://dec63u5qjpkhp" path="res://assets/sprites/block_bad_green_1.png" id="1_ncv5l"]
+[ext_resource type="Texture2D" uid="uid://cy5nn2p3vh0bb" path="res://assets/sprites/block_bad_green_2.png" id="2_ey03i"]
+[ext_resource type="Texture2D" uid="uid://cvb2nqamhyij6" path="res://assets/sprites/block_bad_green_3.png" id="3_48dtr"]
+[ext_resource type="Texture2D" uid="uid://bxfofyj1hbm5w" path="res://assets/sprites/block_bad_green_4.png" id="4_oa8e5"]
+[ext_resource type="AudioStream" uid="uid://cpavtxuvcl8yt" path="res://assets/sounds/sfx_rire_cartoon_pixabaymp3.mp3" id="6_ey03i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ag1hi"]
+atlas = ExtResource("1_ncv5l")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjl7w"]
+atlas = ExtResource("2_ey03i")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuawy"]
+atlas = ExtResource("3_48dtr")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrlg5"]
+atlas = ExtResource("4_oa8e5")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3nys6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ag1hi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjl7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuawy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrlg5")
+}],
+"loop": true,
+"name": &"agrandissement_carre_mechant",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ey03i"]
+size = Vector2(80, 120)
+
+[node name="CarreMechant" type="Area2D"]
+script = ExtResource("1_ey03i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3nys6")
+animation = &"agrandissement_carre_mechant"
+frame_progress = 0.886331
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_ey03i")
+volume_db = 9.0
+autoplay = true
+max_distance = 200.0
+attenuation = 1.5
+parameters/looping = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 3)
+shape = SubResource("RectangleShape2D_ey03i")

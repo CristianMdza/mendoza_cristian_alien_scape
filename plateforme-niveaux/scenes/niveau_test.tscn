@@ -257,11 +257,9 @@ tile_set = ExtResource("1_lbg1e")
 
 [node name="PanneauMessage" parent="." groups=["panneaux"] instance=ExtResource("3_ruoco")]
 position = Vector2(544, 256)
-message = "J'aime cet exemple."
 
 [node name="PanneauMessage2" parent="." groups=["panneaux"] instance=ExtResource("3_ruoco")]
 position = Vector2(1192, 640)
-message = "Quelles d'autres mécaniques on peut créer pour ce jeu ?"
 
 [node name="Joueur" parent="." instance=ExtResource("2_ktk5d")]
 position = Vector2(200, 120)

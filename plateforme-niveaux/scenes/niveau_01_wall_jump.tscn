@@ -17,11 +17,11 @@
 [ext_resource type="Script" uid="uid://bduvelojw5swt" path="res://scripts/porte_niveau.gd" id="13_502yv"]
 [ext_resource type="PackedScene" uid="uid://ccox6m3u0rcsd" path="res://scenes/feu_camp.tscn" id="16_ddliv"]
 [ext_resource type="PackedScene" uid="uid://dlynv50j15psb" path="res://scenes/plate_forme_horizontale.tscn" id="17_48fm7"]
-[ext_resource type="PackedScene" uid="uid://bo2wh1bw38s54" path="res://scenes/carre_dormant.tscn" id="19_48fm7"]
 [ext_resource type="PackedScene" uid="uid://dd65fdshmk4al" path="res://scenes/escalier_bloc_bottom.tscn" id="20_a5eee"]
 [ext_resource type="PackedScene" uid="uid://c3amoeyy6kjry" path="res://scenes/escalier_bloc_center.tscn" id="21_upom3"]
 [ext_resource type="PackedScene" uid="uid://sfv2qrenm4yh" path="res://scenes/drapeau_victoire.tscn" id="22_a5eee"]
 [ext_resource type="PackedScene" uid="uid://77ax8o5svi1b" path="res://scenes/escalier_bloc_top.tscn" id="22_i0mkx"]
+[ext_resource type="PackedScene" uid="uid://cfd48ovep5vaj" path="res://scenes/carre_mechant.tscn" id="23_i0mkx"]
 [ext_resource type="AudioStream" uid="uid://bntrx53f65k1j" path="res://assets/sounds/musique_arabe_pixabay.mp3" id="23_upom3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_danug"]
@@ -134,7 +134,7 @@ position = Vector2(1528, 96)
 rotation = -3.14159
 
 [node name="CactusDangereux10" parent="CactusDangereux" instance=ExtResource("9_7rg5r")]
-position = Vector2(1312, 1056)
+position = Vector2(1311, 1056)
 
 [node name="BuissonsDangereux" type="Node2D" parent="."]
 
@@ -142,12 +142,7 @@ position = Vector2(1312, 1056)
 position = Vector2(225, 416)
 
 [node name="BuissonDangereux2" parent="BuissonsDangereux" instance=ExtResource("12_ddliv")]
-position = Vector2(1888, 1056)
-
-[node name="Collines_sourires" type="Node2D" parent="."]
-
-[node name="CollineSourire" parent="Collines_sourires" instance=ExtResource("19_48fm7")]
-position = Vector2(832, 794)
+position = Vector2(2400, 416)
 
 [node name="monnaies" type="Node2D" parent="."]
 
@@ -194,6 +189,18 @@ position = Vector2(2528, 416)
 
 [node name="DrapeauVictoire" parent="." instance=ExtResource("22_a5eee")]
 position = Vector2(1377, 608)
+
+[node name="CarresMechantsGroupe" type="Node2D" parent="."]
+position = Vector2(1882, 1051)
+scale = Vector2(0.6, 0.6)
+
+[node name="CarreMechant" parent="CarresMechantsGroupe" instance=ExtResource("23_i0mkx")]
+position = Vector2(-1698.33, -421.667)
+scale = Vector2(0.9, 0.9)
+
+[node name="CarreMechant2" parent="CarresMechantsGroupe" instance=ExtResource("23_i0mkx")]
+position = Vector2(0, 5)
+scale = Vector2(0.9, 0.9)
 
 [node name="Joueur" parent="." instance=ExtResource("10_uqc8o")]
 position = Vector2(96, 834)
