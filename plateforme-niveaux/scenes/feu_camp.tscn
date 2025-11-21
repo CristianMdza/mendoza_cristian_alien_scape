@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b8ggrwxi24j54" path="res://assets/sprites/torch_on_a.png" id="1_3sh8h"]
 [ext_resource type="Script" uid="uid://4its60bbx3y8" path="res://scripts/feu_camp.gd" id="1_r8ns6"]
 [ext_resource type="Texture2D" uid="uid://bbdk88pw4ln4f" path="res://assets/sprites/torch_on_b.png" id="2_r8ns6"]
-[ext_resource type="AudioStream" uid="uid://c7gwbul2rel4f" path="res://assets/sounds/Wood Burning in Fireplace 4 - QuickSounds.com.mp3" id="3_yv22f"]
+[ext_resource type="AudioStream" uid="uid://b3n85al8wa6v2" path="res://assets/sounds/sfx_campfire_pixabay.mp3" id="4_r8ns6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1mygw"]
 atlas = ExtResource("1_3sh8h")
@@ -41,7 +41,8 @@ frame = 1
 frame_progress = 0.541906
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_yv22f")
+position = Vector2(1, 0)
+stream = ExtResource("4_r8ns6")
 autoplay = true
 max_distance = 200.0
 attenuation = 1.5

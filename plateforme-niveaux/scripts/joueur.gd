@@ -66,6 +66,8 @@ func _physics_process(delta: float) -> void:
 
 # MORT DU JOUEUR
 func die():
+	if $MortEchecSfx:                  # Son de mort/échec.
+		$MortEchecSfx.play()
 	set_physics_process(false)         # Arrête la physique.
 	if has_node("AnimatedSprite2D"):
 		$AnimatedSprite2D.play("mort") # Animation de mort.

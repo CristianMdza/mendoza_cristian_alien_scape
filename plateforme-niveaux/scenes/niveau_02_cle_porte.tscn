@@ -1,19 +1,17 @@
-[gd_scene load_steps=38 format=4 uid="uid://dy0v8872jlfyb"]
+[gd_scene load_steps=39 format=4 uid="uid://dy0v8872jlfyb"]
 
 [ext_resource type="PackedScene" uid="uid://dscroh4yyuxie" path="res://scenes/exemples-final/hud_final.tscn" id="1_d266p"]
 [ext_resource type="Texture2D" uid="uid://c0af475cpbslq" path="res://assets/arriere_plans/montagne_foret_neige.png" id="2_p0bt2"]
 [ext_resource type="Script" uid="uid://bduvelojw5swt" path="res://scripts/porte_niveau.gd" id="3_ni1jg"]
-[ext_resource type="PackedScene" uid="uid://uslerb5tjgwb" path="res://scenes/boulefeu.tscn" id="4_gax5v"]
 [ext_resource type="PackedScene" uid="uid://dwvq0v5nu4niq" path="res://scenes/end_game.tscn" id="4_mmh6l"]
 [ext_resource type="Texture2D" uid="uid://dcepbid2o8w4k" path="res://assets/spritesheets/spritesheet-tiles-default.png" id="5_5l8ss"]
-[ext_resource type="PackedScene" uid="uid://dig8enhjnqwbo" path="res://scenes/boulefeu_2.tscn" id="6_tkr4a"]
+[ext_resource type="PackedScene" uid="uid://be2ki8lm3urbg" path="res://scenes/boule_feu_4.tscn" id="6_g1qhf"]
+[ext_resource type="PackedScene" uid="uid://8wi0gkob6hay" path="res://scenes/boule_feu_3.tscn" id="6_x5hwj"]
 [ext_resource type="TileSet" uid="uid://cwqycux5h0q2u" path="res://assets/spritesheets/paysage_tile_set.tres" id="6_xnlme"]
 [ext_resource type="PackedScene" uid="uid://cdkctwymw3to1" path="res://scenes/scie_1_horizontal_niveau_3.tscn" id="8_74rea"]
-[ext_resource type="PackedScene" uid="uid://c23kf5bcjyxji" path="res://scenes/boulefeu_4.tscn" id="8_diw74"]
-[ext_resource type="PackedScene" uid="uid://bhqe2rtmc8kfk" path="res://scenes/boulefeu_3.tscn" id="8_ltaro"]
 [ext_resource type="PackedScene" uid="uid://dirydc1jhbrdb" path="res://scenes/joueur.tscn" id="8_oeuwp"]
 [ext_resource type="PackedScene" uid="uid://c3amoeyy6kjry" path="res://scenes/escalier_bloc_center.tscn" id="8_ydwbf"]
-[ext_resource type="PackedScene" uid="uid://6e31rdpcjy62" path="res://scenes/drapeau_victoire.tscn" id="9_74rea"]
+[ext_resource type="PackedScene" uid="uid://sfv2qrenm4yh" path="res://scenes/drapeau_victoire.tscn" id="9_74rea"]
 [ext_resource type="Script" uid="uid://cnf4o5qr4x1by" path="res://scripts/controle_camera.gd" id="9_m40i3"]
 [ext_resource type="PackedScene" uid="uid://cmvpjrvm6vrky" path="res://scenes/scie_2_horizontal_inverse_niveau_3.tscn" id="9_o1uv5"]
 [ext_resource type="PackedScene" uid="uid://hi7t64ijaxck" path="res://scenes/monnaie.tscn" id="10_8vkqi"]
@@ -36,35 +34,35 @@
 [ext_resource type="PackedScene" uid="uid://d4lekedhcqt2v" path="res://scenes/bloc_rotation_droit.tscn" id="26_vwnr8"]
 [ext_resource type="PackedScene" uid="uid://cipo5vtyms681" path="res://scenes/plate_forme_rotation_.tscn" id="27_827h1"]
 [ext_resource type="PackedScene" uid="uid://dc2xsao7grqqb" path="res://scenes/trampoline2.tscn" id="29_x5hwj"]
+[ext_resource type="PackedScene" uid="uid://ckt61c5qe1tui" path="res://scenes/boule_feu_2.tscn" id="36_x5hwj"]
+[ext_resource type="PackedScene" uid="uid://8s8cwfm3qmol" path="res://scenes/boule_feu_1.tscn" id="37_g1qhf"]
+[ext_resource type="AudioStream" uid="uid://bn4dwwfh7ky1f" path="res://assets/sounds/musique_bel_hiver_pixabay.mp3" id="37_ybot8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_danug"]
 size = Vector2(25, 53)
 
 [node name="Niveau00" type="Node"]
 
-[node name="HUD" parent="." instance=ExtResource("1_d266p")]
-
 [node name="ArrierePlan" type="Sprite2D" parent="."]
 position = Vector2(-745, -24)
 scale = Vector2(2.43751, 2.25539)
 texture = ExtResource("2_p0bt2")
 
+[node name="HUD" parent="." instance=ExtResource("1_d266p")]
+
 [node name="BoulesFeuxGroupe" type="Node2D" parent="."]
 
-[node name="Boulefeu" parent="BoulesFeuxGroupe" instance=ExtResource("4_gax5v")]
-position = Vector2(-609, -672)
+[node name="BouleFeu1" parent="BoulesFeuxGroupe" instance=ExtResource("37_g1qhf")]
+position = Vector2(-608, -672)
 
-[node name="Boulefeu2" parent="BoulesFeuxGroupe" instance=ExtResource("6_tkr4a")]
-position = Vector2(-415, -608)
+[node name="BouleFeu2" parent="BoulesFeuxGroupe" instance=ExtResource("36_x5hwj")]
+position = Vector2(-416, -608)
 
-[node name="Boulefeu3" parent="BoulesFeuxGroupe" instance=ExtResource("8_ltaro")]
+[node name="BouleFeu3" parent="BoulesFeuxGroupe" instance=ExtResource("6_x5hwj")]
 position = Vector2(-224, -672)
 
-[node name="Boulefeu4" parent="BoulesFeuxGroupe" instance=ExtResource("8_diw74")]
+[node name="BouleFeu4" parent="BoulesFeuxGroupe" instance=ExtResource("6_g1qhf")]
 position = Vector2(-32, -608)
-
-[node name="DrapeauVictoire" parent="." instance=ExtResource("9_74rea")]
-position = Vector2(352, -544)
 
 [node name="SciesHorizontalesNiveau3Groupe" type="Node2D" parent="."]
 
@@ -250,6 +248,9 @@ position = Vector2(-1312, -608)
 [node name="PlateFormeRotation" parent="." instance=ExtResource("27_827h1")]
 position = Vector2(-1984, 108)
 
+[node name="DrapeauVictoire" parent="." instance=ExtResource("9_74rea")]
+position = Vector2(352, -544)
+
 [node name="Joueur" parent="." instance=ExtResource("8_oeuwp")]
 position = Vector2(607, 577)
 metadata/_edit_group_ = true
@@ -275,5 +276,10 @@ position = Vector2(-1216, -66)
 
 [node name="Killzone" parent="." instance=ExtResource("13_ao7hb")]
 position = Vector2(-511, 894)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("37_ybot8")
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="PorteNiveau" to="PorteNiveau" method="_on_body_entered"]
