@@ -1,17 +1,22 @@
 extends Node
 
 @export var monnaies = 0
-signal monnaie_collectee
+@export var coeurs = 0 
 
+signal monnaie_collectee
+signal coeur_collecte
 signal cle_collectee
 
 func debloquer_cle(groupe_cle):
 	cle_collectee.emit(groupe_cle)
 
-
 func augmenter_monnaies():
 	monnaies += 1
 	monnaie_collectee.emit(monnaies)
+
+func augmenter_coeurs():       
+	coeurs += 1
+	coeur_collecte.emit(coeurs)
 
 func changer_scene(nouvelle_scene:PackedScene):
 	if not nouvelle_scene:

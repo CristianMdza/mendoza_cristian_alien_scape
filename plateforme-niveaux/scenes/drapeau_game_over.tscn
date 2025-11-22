@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://csb0chme43p8i"]
+
+[ext_resource type="Texture2D" uid="uid://bfyo0xndnpt8v" path="res://assets/sprites/flag_yellow_a.png" id="1_0vf30"]
+[ext_resource type="Script" uid="uid://c2thhyjh5warj" path="res://scripts/drapeau_game_over.gd" id="1_am3nc"]
+[ext_resource type="Texture2D" uid="uid://c1oin322s4cga" path="res://assets/sprites/flag_yellow_b.png" id="2_am3nc"]
+[ext_resource type="AudioStream" uid="uid://dilv6es2ow4yv" path="res://assets/sounds/sfx_game_over_arcade_pixabay.mp3" id="4_snox2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snox2"]
+atlas = ExtResource("1_0vf30")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yoy0l"]
+atlas = ExtResource("2_am3nc")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t0wcj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snox2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yoy0l")
+}],
+"loop": true,
+"name": &"mouvement_drapeau_game_over",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drann"]
+size = Vector2(56, 58)
+
+[node name="DrapeauGameOver" type="Area2D"]
+script = ExtResource("1_am3nc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t0wcj")
+animation = &"mouvement_drapeau_game_over"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_drann")
+
+[node name="DrapeauSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_snox2")
+volume_db = 2.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

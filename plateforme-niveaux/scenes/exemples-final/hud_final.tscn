@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dscroh4yyuxie"]
+[gd_scene load_steps=7 format=3 uid="uid://dscroh4yyuxie"]
 
 [ext_resource type="Script" uid="uid://cqqknqml34mci" path="res://scenes/exemples-final/hud_final.gd" id="1_a8wru"]
 [ext_resource type="Texture2D" uid="uid://hbi3iucyuwkw" path="res://assets/sprites/hud_coin.png" id="1_jlkgv"]
 [ext_resource type="AudioStream" uid="uid://fbu6ptr8ejdr" path="res://assets/sounds/sfx_coin.ogg" id="3_ndi1s"]
+[ext_resource type="Texture2D" uid="uid://dlxmxeq660paq" path="res://assets/sprites/hud_heart.png" id="4_q4j8q"]
+[ext_resource type="AudioStream" uid="uid://ou1xgd5oan85" path="res://assets/sounds/sfx_magic.ogg" id="5_mdpo5"]
 
 [sub_resource type="SystemFont" id="SystemFont_2qvlb"]
 font_names = PackedStringArray("Roboto")
@@ -17,6 +19,8 @@ script = ExtResource("1_a8wru")
 layout_direction = 2
 anchors_preset = 10
 anchor_right = 1.0
+offset_left = 547.0
+offset_right = -384.0
 offset_bottom = 64.0
 grow_horizontal = 2
 alignment = 1
@@ -38,4 +42,27 @@ vertical_alignment = 1
 [node name="MonnaiesSFX" type="AudioStreamPlayer" parent="HBoxContainer"]
 unique_name_in_owner = true
 stream = ExtResource("3_ndi1s")
+volume_db = -6.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+offset_left = 384.0
+offset_right = 477.0
+offset_bottom = 64.0
+
+[node name="CoeurIcon" type="TextureRect" parent="HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("4_q4j8q")
+
+[node name="CoeurLabel" type="Label" parent="HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = SubResource("SystemFont_2qvlb")
+theme_override_font_sizes/font_size = 44
+text = "0"
+vertical_alignment = 1
+
+[node name="CoeurSFX" type="AudioStreamPlayer" parent="HBoxContainer2"]
+unique_name_in_owner = true
+stream = ExtResource("5_mdpo5")
 volume_db = -6.0

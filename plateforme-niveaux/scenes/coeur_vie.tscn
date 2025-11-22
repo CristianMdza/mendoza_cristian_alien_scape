@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdnncqghisusv"]
+
+[ext_resource type="Texture2D" uid="uid://bojdbdx5utfx1" path="res://assets/sprites/heart.png" id="1_xr0w3"]
+[ext_resource type="Script" uid="uid://b26syktv075li" path="res://scripts/coeur_vie.gd" id="1_y80kw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wfl10"]
+radius = 18.0
+
+[node name="CoeurVie" type="Area2D"]
+script = ExtResource("1_y80kw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xr0w3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_wfl10")
