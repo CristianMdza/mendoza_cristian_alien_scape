@@ -38,7 +38,7 @@ J’ai effectué un **fork** du projet original pour le modifier et lui donner u
   - Pièges normaux et animés  
   - Ascenseurs et plateformes mobiles  
   - Trampolines  
-  - Objets à ramasser (pièces, cœurs, etc.)  
+  - Objets à ramasser (monnaies, coeurs, clé)  
   - Objets sonores et pièges  
   - Ennemis
   - etc...  
