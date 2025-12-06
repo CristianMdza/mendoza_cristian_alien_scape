@@ -1,0 +1,116 @@
+{
+	"_comment": "OmnEmoji - Text Font Providers. Add custom text fonts here.",
+	"providers": {
+		"noto_sans": {
+			"name": "Noto Sans",
+			"description": "Google's universal text font. Excellent Unicode coverage.",
+			"filename": "NotoSans-Regular.ttf",
+			"subdir": "noto-sans",
+			"size_mb": 0.6,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"zip_download": false,
+			"mirrors": [
+				"https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSans/hinted/ttf/NotoSans-Regular.ttf",
+				"https://github.com/notofonts/latin-greek-cyrillic/releases/download/NotoSans-v2.015/NotoSans-Regular.ttf"
+			]
+		},
+		"roboto": {
+			"name": "Roboto",
+			"description": "Android's default font. Clean and modern.",
+			"filename": "Roboto-Regular.ttf",
+			"subdir": "roboto",
+			"size_mb": 0.2,
+			"license": "Apache 2.0",
+			"license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+			"zip_download": false,
+			"mirrors": [
+				"https://cdn.jsdelivr.net/fontsource/fonts/roboto@latest/latin-400-normal.ttf",
+				"https://github.com/googlefonts/roboto-classic/raw/main/fonts/ttf/Roboto-Regular.ttf"
+			]
+		},
+		"inter": {
+			"name": "Inter",
+			"description": "Modern UI font designed for screens. Highly legible.",
+			"filename": "Inter-Regular.ttf",
+			"subdir": "inter",
+			"size_mb": 0.3,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"zip_download": false,
+			"mirrors": [
+				"https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.ttf"
+			]
+		},
+		"open_sans": {
+			"name": "Open Sans",
+			"description": "Friendly, open font. Great readability.",
+			"filename": "OpenSans-Regular.ttf",
+			"subdir": "open-sans",
+			"size_mb": 0.3,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"zip_download": false,
+			"mirrors": [
+				"https://cdn.jsdelivr.net/fontsource/fonts/open-sans@latest/latin-400-normal.ttf",
+				"https://github.com/googlefonts/opensans/raw/main/fonts/ttf/OpenSans-Regular.ttf"
+			]
+		},
+		"source_sans": {
+			"name": "Source Sans 3",
+			"description": "Adobe's open source UI font. Professional look.",
+			"filename": "SourceSans3-Regular.ttf",
+			"subdir": "source-sans",
+			"size_mb": 0.2,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"zip_download": false,
+			"mirrors": [
+				"https://cdn.jsdelivr.net/fontsource/fonts/source-sans-3@latest/latin-400-normal.ttf",
+				"https://github.com/adobe-fonts/source-sans/releases/download/3.052R/TTF/SourceSans3-Regular.ttf"
+			]
+		},
+		"lato": {
+			"name": "Lato",
+			"description": "Warm, semi-rounded font. Popular for web.",
+			"filename": "Lato-Regular.ttf",
+			"subdir": "lato",
+			"size_mb": 0.1,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"zip_download": false,
+			"mirrors": [
+				"https://cdn.jsdelivr.net/fontsource/fonts/lato@latest/latin-400-normal.ttf",
+				"https://github.com/latofonts/lato-source/raw/main/fonts/Lato-Regular.ttf"
+			]
+		},
+		"ubuntu": {
+			"name": "Ubuntu",
+			"description": "Canonical's distinctive font. Unique personality.",
+			"filename": "Ubuntu-Regular.ttf",
+			"subdir": "ubuntu",
+			"size_mb": 0.4,
+			"license": "Ubuntu Font License",
+			"license_url": "https://ubuntu.com/legal/font-licence",
+			"zip_download": false,
+			"mirrors": [
+				"https://cdn.jsdelivr.net/fontsource/fonts/ubuntu@latest/latin-400-normal.ttf",
+				"https://github.com/canonical/UbuntuMono-fonts/raw/main/Ubuntu-Regular.ttf"
+			]
+		},
+		"fira_sans": {
+			"name": "Fira Sans",
+			"description": "Mozilla's Firefox OS font. Technical and precise.",
+			"filename": "FiraSans-Regular.ttf",
+			"subdir": "fira-sans",
+			"size_mb": 0.2,
+			"license": "SIL OFL 1.1",
+			"license_url": "https://openfontlicense.org/",
+			"zip_download": false,
+			"mirrors": [
+				"https://cdn.jsdelivr.net/fontsource/fonts/fira-sans@latest/latin-400-normal.ttf",
+				"https://github.com/mozilla/Fira/raw/master/ttf/FiraSans-Regular.ttf"
+			]
+		}
+	}
+}
