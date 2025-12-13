@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://j05okgtuaimk"]
+[gd_scene load_steps=26 format=3 uid="uid://j05okgtuaimk"]
 
 [ext_resource type="Script" uid="uid://be02vcw1pg0va" path="res://scripts/menu_controle.gd" id="1_5qrj1"]
 [ext_resource type="Texture2D" uid="uid://crhkoo4vld02q" path="res://assets/spritesheets/close_icon.tres" id="2_5qrj1"]
+[ext_resource type="AudioStream" uid="uid://dnwwja31sxtg6" path="res://assets/sounds/ui_mouse_click_pixabay.mp3" id="2_kftfl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cixlm"]
 bg_color = Color(0.498039, 0.498039, 0.498039, 0.682353)
@@ -11,19 +12,196 @@ border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0.137255, 0.0980392, 0.286275, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qrj1"]
-bg_color = Color(0.0392157, 0.576471, 0.635294, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmyl1"]
-bg_color = Color(0.0392157, 0.576471, 0.635294, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kftfl"]
-bg_color = Color(0.0397769, 0.574802, 0.636618, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nvwea"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-border_color = Color(0.137255, 0.0980392, 0.286275, 1)
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tmovy"]
+bg_color = Color(0.655398, 0.494983, 0.379915, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.354991, 0.235348, 0.192132, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rra5m"]
+bg_color = Color(0.760784, 0.466667, 0.160784, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.2, 0.121569, 0.0941176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qrj1"]
+bg_color = Color(0.756863, 0.619608, 0.52549, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.435294, 0.294118, 0.243137, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_my6ck"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hhbvu"]
+bg_color = Color(0.654902, 0.494118, 0.380392, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.356863, 0.235294, 0.192157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bk7mp"]
+bg_color = Color(0.760784, 0.466667, 0.160784, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.2, 0.121569, 0.0941176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmyl1"]
+bg_color = Color(0.756863, 0.619608, 0.52549, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.435294, 0.294118, 0.243137, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_towul"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yb3q1"]
+bg_color = Color(0.654902, 0.494118, 0.380392, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.356863, 0.235294, 0.192157, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hgjal"]
+bg_color = Color(0.760784, 0.466667, 0.160784, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.2, 0.121569, 0.0941176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxbbr"]
+bg_color = Color(0.756863, 0.619608, 0.52549, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.435294, 0.294118, 0.243137, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kftfl"]
+bg_color = Color(0.756863, 0.619608, 0.52549, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.435294, 0.294118, 0.243137, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6kup"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tauf2"]
+bg_color = Color(0.356863, 0.235294, 0.192157, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xm5qc"]
+bg_color = Color(0.2, 0.121569, 0.0941176, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lghl3"]
+bg_color = Color(0.435294, 0.294118, 0.243137, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="InputEventKey" id="InputEventKey_5qrj1"]
 device = -1
@@ -43,8 +221,11 @@ region = Rect2(350, 350, 50, 50)
 [node name="MenuControle" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_5qrj1")
-metadata/_edit_vertical_guides_ = [512.0]
-metadata/_edit_horizontal_guides_ = [384.0]
+metadata/_edit_vertical_guides_ = [512.0, 1024.0, 218.0, 807.0, 777.0, 719.0, 248.0]
+metadata/_edit_horizontal_guides_ = [383.0, 768.0, 149.0, 620.0, 179.0, 237.0, 590.0, 208.0, 398.0, 368.0]
+
+[node name="ClickSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_kftfl")
 
 [node name="PauseMenu" type="Panel" parent="."]
 anchors_preset = 15
@@ -62,13 +243,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -146.0
-offset_top = -35.0
-offset_right = 143.0
-offset_bottom = 38.0
+offset_left = -125.0
+offset_top = -135.0
+offset_right = 125.0
+offset_bottom = -65.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
 theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxFlat_nvwea")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tmovy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rra5m")
 theme_override_styles/normal = SubResource("StyleBoxFlat_5qrj1")
 text = "Instructions"
 
@@ -79,18 +266,41 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -146.0
-offset_top = 65.0
-offset_right = 143.0
-offset_bottom = 138.0
+offset_left = -125.0
+offset_top = -35.0
+offset_right = 125.0
+offset_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
 theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxFlat_my6ck")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hhbvu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bk7mp")
 theme_override_styles/normal = SubResource("StyleBoxFlat_gmyl1")
 text = "Continuer"
 
+[node name="QuitButton" type="Button" parent="PauseMenu"]
+layout_mode = 0
+offset_left = 387.0
+offset_top = 449.0
+offset_right = 637.0
+offset_bottom = 519.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxFlat_towul")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yb3q1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hgjal")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yxbbr")
+text = "Quitter"
+
 [node name="InstructionsScreen" type="Panel" parent="PauseMenu"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -113,40 +323,42 @@ offset_top = 30.0
 offset_right = -30.0
 offset_bottom = 88.0
 grow_horizontal = 0
+theme_override_styles/focus = SubResource("StyleBoxFlat_y6kup")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tauf2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xm5qc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lghl3")
 icon = ExtResource("2_5qrj1")
+icon_alignment = 1
 
-[node name="InstructionsLabel" type="Label" parent="PauseMenu/InstructionsScreen"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 28.0
-offset_top = 158.0
-offset_right = -27.0
-offset_bottom = 14.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 32
+[node name="InstructionsTitle" type="RichTextLabel" parent="PauseMenu/InstructionsScreen"]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 24.0
+offset_right = 470.0
+offset_bottom = 93.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+theme_override_font_sizes/normal_font_size = 48
+text = "Instructions 🎮 "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InstructionsText" type="RichTextLabel" parent="PauseMenu/InstructionsScreen"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 154.0
+offset_right = 552.0
+offset_bottom = 470.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/normal_font_size = 32
 text = "[→] ou [D] : Marcher à Droite
 [←] ou [A] : Marcher à Gauche
 [Espace] : Sauter
 [↑] ou [W] : Monter (Ex: Échelle)
 [↓] ou [S] : Descendre (Ex: Échelle)
 [Échap] : Mettre le Jeu en Pause"
-
-[node name="InstructionsTitle" type="Label" parent="PauseMenu/InstructionsScreen"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 31.0
-offset_top = 21.0
-offset_right = -23.0
-offset_bottom = -372.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 48
-text = "🎮 Contrôles du Jeu"
 
 [node name="PauseButton" type="Button" parent="."]
 anchors_preset = 1
@@ -162,8 +374,10 @@ toggle_mode = true
 shortcut = SubResource("Shortcut_kftfl")
 icon = SubResource("AtlasTexture_cixlm")
 flat = true
+icon_alignment = 1
 
 [connection signal="pressed" from="PauseMenu/ShowInstructionsButton" to="." method="_on_show_instructions_button_pressed"]
 [connection signal="pressed" from="PauseMenu/ContinueButton" to="." method="continuer"]
+[connection signal="pressed" from="PauseMenu/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="PauseMenu/InstructionsScreen/CloseButton" to="." method="_on_close_instructions_button_pressed"]
 [connection signal="toggled" from="PauseButton" to="." method="_on_pause_button_toggled"]

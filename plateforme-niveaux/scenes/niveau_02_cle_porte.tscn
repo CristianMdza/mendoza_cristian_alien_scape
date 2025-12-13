@@ -316,6 +316,8 @@ editor_draw_limits = true
 script = ExtResource("9_m40i3")
 
 [node name="MenuControle" parent="." instance=ExtResource("11_rvs65")]
+metadata/_edit_vertical_guides_ = [512.0]
+metadata/_edit_horizontal_guides_ = [384.0]
 
 [node name="KeyBlue" parent="." groups=["cle_bleu"] instance=ExtResource("12_ao7hb")]
 position = Vector2(-1984, 481)

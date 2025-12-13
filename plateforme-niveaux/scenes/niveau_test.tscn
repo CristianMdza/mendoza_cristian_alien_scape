@@ -277,6 +277,8 @@ editor_draw_limits = true
 script = ExtResource("4_5hoti")
 
 [node name="MenuControle" parent="." instance=ExtResource("12_danug")]
+metadata/_edit_vertical_guides_ = [512.0]
+metadata/_edit_horizontal_guides_ = [384.0]
 
 [node name="PorteNiveau" type="Area2D" parent="."]
 position = Vector2(1312, 619)
