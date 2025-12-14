@@ -1,5 +1,6 @@
 [gd_scene load_steps=43 format=4 uid="uid://dy0v8872jlfyb"]
 
+[ext_resource type="AudioStream" uid="uid://drrf3x2xsqpr6" path="res://assets/musiques/musique_winter_joy_festive_orchestral_pixabay.mp3" id="1_7hn82"]
 [ext_resource type="PackedScene" uid="uid://dscroh4yyuxie" path="res://scenes/exemples-final/hud_final.tscn" id="1_d266p"]
 [ext_resource type="Texture2D" uid="uid://c0af475cpbslq" path="res://assets/arriere_plans/montagne_foret_neige.png" id="2_p0bt2"]
 [ext_resource type="Script" uid="uid://bduvelojw5swt" path="res://scripts/porte_niveau.gd" id="3_ni1jg"]
@@ -37,7 +38,6 @@
 [ext_resource type="PackedScene" uid="uid://dc2xsao7grqqb" path="res://scenes/trampoline2.tscn" id="29_x5hwj"]
 [ext_resource type="PackedScene" uid="uid://ckt61c5qe1tui" path="res://scenes/boule_feu_2.tscn" id="36_x5hwj"]
 [ext_resource type="PackedScene" uid="uid://8s8cwfm3qmol" path="res://scenes/boule_feu_1.tscn" id="37_g1qhf"]
-[ext_resource type="AudioStream" uid="uid://bn4dwwfh7ky1f" path="res://assets/sounds/musique_bel_hiver_pixabay.mp3" id="37_ybot8"]
 [ext_resource type="PackedScene" uid="uid://dw5c25mvjj4wa" path="res://scenes/monstre.tscn" id="38_ybot8"]
 [ext_resource type="PackedScene" uid="uid://de82iea1y2ek7" path="res://scenes/panneau_message.tscn" id="39_wac75"]
 [ext_resource type="PackedScene" uid="uid://cdnncqghisusv" path="res://scenes/coeur_vie.tscn" id="41_7hn82"]
@@ -329,8 +329,9 @@ position = Vector2(-511, 894)
 [node name="Killzone2" parent="." instance=ExtResource("26_gax5v")]
 position = Vector2(-1216, -66)
 
-[node name="MusiqueAmbianceHiver" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("37_ybot8")
+[node name="TroisiemeNiveauMusique" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_7hn82")
+volume_db = -35.0
 autoplay = true
 parameters/looping = true
 

@@ -43,7 +43,7 @@ frame_progress = 0.541906
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(1, 0)
 stream = ExtResource("4_r8ns6")
-volume_db = 0.5
+volume_db = 5.0
 autoplay = true
 max_distance = 200.0
 attenuation = 1.5

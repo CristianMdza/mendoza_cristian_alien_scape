@@ -1,6 +1,7 @@
 [gd_scene load_steps=27 format=4 uid="uid://b2686s3s4sfad"]
 
 [ext_resource type="PackedScene" uid="uid://dscroh4yyuxie" path="res://scenes/exemples-final/hud_final.tscn" id="1_e52v2"]
+[ext_resource type="AudioStream" uid="uid://bc3241auursmg" path="res://assets/musiques/musique_eastern_spirit_pixabay.mp3" id="1_n5h22"]
 [ext_resource type="Texture2D" uid="uid://bwb1abxcju4l2" path="res://assets/arriere_plans/background_final_day_dessert.png" id="2_w326i"]
 [ext_resource type="PackedScene" uid="uid://dy0v8872jlfyb" path="res://scenes/niveau_02_cle_porte.tscn" id="4_rm66m"]
 [ext_resource type="PackedScene" uid="uid://dklftmfk5csx5" path="res://scenes/ascenseur.tscn" id="7_07qt4"]
@@ -23,7 +24,6 @@
 [ext_resource type="PackedScene" uid="uid://sfv2qrenm4yh" path="res://scenes/drapeau_victoire.tscn" id="22_a5eee"]
 [ext_resource type="PackedScene" uid="uid://77ax8o5svi1b" path="res://scenes/escalier_bloc_top.tscn" id="22_i0mkx"]
 [ext_resource type="PackedScene" uid="uid://cfd48ovep5vaj" path="res://scenes/carre_mechant.tscn" id="23_i0mkx"]
-[ext_resource type="AudioStream" uid="uid://bntrx53f65k1j" path="res://assets/sounds/musique_arabe_pixabay.mp3" id="23_upom3"]
 [ext_resource type="PackedScene" uid="uid://cdnncqghisusv" path="res://scenes/coeur_vie.tscn" id="25_n5h22"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_danug"]
@@ -261,8 +261,9 @@ position = Vector2(1371, 1214)
 metadata/_edit_vertical_guides_ = [512.0]
 metadata/_edit_horizontal_guides_ = [384.0]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("23_upom3")
+[node name="DeuxiemeNiveauMusique" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_n5h22")
+volume_db = -35.0
 autoplay = true
 parameters/looping = true
 
