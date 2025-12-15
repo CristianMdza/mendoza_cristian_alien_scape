@@ -1,6 +1,8 @@
 extends Area2D
 
-func _on_body_entered(body: Node2D) -> void:
+# DÉTECTION DE COLLISION
+func _on_body_entered(body):
+	# Si le corps qui entre en collision est le joueur,
+	# on lui inflige des dégâts (perte de coeur, blessure ou mort).
 	if body is Joueur:
-		print("Jouer mort")
-		get_tree().call_deferred("reload_current_scene")
+		body.prendre_degats()

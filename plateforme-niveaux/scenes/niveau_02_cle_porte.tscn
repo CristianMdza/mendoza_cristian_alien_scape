@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://dy0v8872jlfyb"]
+[gd_scene load_steps=49 format=4 uid="uid://dy0v8872jlfyb"]
 
 [ext_resource type="AudioStream" uid="uid://drrf3x2xsqpr6" path="res://assets/musiques/musique_winter_joy_festive_orchestral_pixabay.mp3" id="1_7hn82"]
 [ext_resource type="PackedScene" uid="uid://dscroh4yyuxie" path="res://scenes/exemples-final/hud_final.tscn" id="1_d266p"]
@@ -36,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://d4lekedhcqt2v" path="res://scenes/bloc_rotation_droit.tscn" id="26_vwnr8"]
 [ext_resource type="PackedScene" uid="uid://cipo5vtyms681" path="res://scenes/plate_forme_rotation_.tscn" id="27_827h1"]
 [ext_resource type="PackedScene" uid="uid://dc2xsao7grqqb" path="res://scenes/trampoline2.tscn" id="29_x5hwj"]
+[ext_resource type="Script" uid="uid://ddsrq0wrobm3g" path="res://scripts/check_point_area.gd" id="35_pfqlw"]
 [ext_resource type="PackedScene" uid="uid://ckt61c5qe1tui" path="res://scenes/boule_feu_2.tscn" id="36_x5hwj"]
 [ext_resource type="PackedScene" uid="uid://8s8cwfm3qmol" path="res://scenes/boule_feu_1.tscn" id="37_g1qhf"]
 [ext_resource type="PackedScene" uid="uid://dw5c25mvjj4wa" path="res://scenes/monstre.tscn" id="38_ybot8"]
@@ -44,6 +45,21 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_danug"]
 size = Vector2(25, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hn82"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pfqlw"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_16615"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_35n30"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smunl"]
+size = Vector2(64, 64)
 
 [node name="Niveau00" type="Node"]
 
@@ -284,22 +300,68 @@ position = Vector2(124, 128)
 
 [node name="PanneauMessage" parent="PanneauxMessagesGroupe" instance=ExtResource("39_wac75")]
 position = Vector2(326, 448)
-message = "Bienvenue au Niveau #3 ! Ne te fie pas au saut, les blocs tournent et l'abîme, ça fait mal..."
+message = "👋 Bienvenue au Niveau 3 ❄️ ! Sauts précis, Blocs instables et Dangers t’attendent !"
+
+[node name="CheckPointArea" type="Area2D" parent="PanneauxMessagesGroupe/PanneauMessage"]
+script = ExtResource("35_pfqlw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PanneauxMessagesGroupe/PanneauMessage/CheckPointArea"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_7hn82")
 
 [node name="PanneauMessage2" parent="PanneauxMessagesGroupe" instance=ExtResource("39_wac75")]
 position = Vector2(-860, 576)
-message = "Prudence aux obstacles : Le Monstre et Les Scies ne sont pas gentils du tout ! "
+message = "⚠️ Attention aux Ennemis ! Le Monstre et les Scies font très mal 🩸 …"
+
+[node name="CheckPointArea" type="Area2D" parent="PanneauxMessagesGroupe/PanneauMessage2"]
+script = ExtResource("35_pfqlw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PanneauxMessagesGroupe/PanneauMessage2/CheckPointArea"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_pfqlw")
 
 [node name="PanneauMessage3" parent="PanneauxMessagesGroupe" instance=ExtResource("39_wac75")]
-message = "Génial, t'es à la moitié du niveau #3. Alerte aux vagues et aux scies dangereuses, vaz-y, ne lâche pas encore !"
+message = "🫣 Reste vigilant ! Les scies ne sont pas de décor et l’eau 🌊  est mortelle ici."
+
+[node name="CheckPointArea" type="Area2D" parent="PanneauxMessagesGroupe/PanneauMessage3"]
+script = ExtResource("35_pfqlw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PanneauxMessagesGroupe/PanneauMessage3/CheckPointArea"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_16615")
 
 [node name="PanneauMessage4" parent="PanneauxMessagesGroupe" instance=ExtResource("39_wac75")]
 position = Vector2(-1628, -448)
-message = "Bravo, t'es proche au but ! Il n'est te reste qu'à chercher la clé magique, reste vigilant aux abîmes et aux pièges !"
+message = "Objectif du niveau ! Trouve la Clé 🗝️  magique dans le Château 🏰  pour ouvrir la porte 🚪 finale !"
+
+[node name="CheckPointArea" type="Area2D" parent="PanneauxMessagesGroupe/PanneauMessage4"]
+script = ExtResource("35_pfqlw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PanneauxMessagesGroupe/PanneauMessage4/CheckPointArea"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_35n30")
 
 [node name="PanneauMessage5" parent="PanneauxMessagesGroupe" instance=ExtResource("39_wac75")]
 position = Vector2(-988, -896)
-message = "Tu pensais ça finissait déjà? Ben là, dernier petit défi contre les boules de feu dangereuses !"
+message = "⚠️ Dernier obstacle ! Évite les Boules de feu et traverse le pont :la sortie est juste après 🥳 !!"
+
+[node name="CheckPointArea" type="Area2D" parent="PanneauxMessagesGroupe/PanneauMessage5"]
+script = ExtResource("35_pfqlw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PanneauxMessagesGroupe/PanneauMessage5/CheckPointArea"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_smunl")
+
+[node name="PanneauMessage6" parent="PanneauxMessagesGroupe" instance=ExtResource("39_wac75")]
+position = Vector2(-1244, 192)
+message = "👏 Bien joué ! Déjà presque  la moitié du niveau atteinte. Continue comme ça !!"
+
+[node name="CheckPointArea" type="Area2D" parent="PanneauxMessagesGroupe/PanneauMessage6"]
+script = ExtResource("35_pfqlw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PanneauxMessagesGroupe/PanneauMessage6/CheckPointArea"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_smunl")
 
 [node name="Joueur" parent="." instance=ExtResource("8_oeuwp")]
 position = Vector2(607, 577)
@@ -341,3 +403,4 @@ parameters/looping = true
 [connection signal="body_entered" from="PanneauxMessagesGroupe/PanneauMessage3" to="PanneauxMessagesGroupe/PanneauMessage3" method="show_message"]
 [connection signal="body_entered" from="PanneauxMessagesGroupe/PanneauMessage4" to="PanneauxMessagesGroupe/PanneauMessage4" method="show_message"]
 [connection signal="body_entered" from="PanneauxMessagesGroupe/PanneauMessage5" to="PanneauxMessagesGroupe/PanneauMessage5" method="show_message"]
+[connection signal="body_entered" from="PanneauxMessagesGroupe/PanneauMessage6" to="PanneauxMessagesGroupe/PanneauMessage6" method="show_message"]

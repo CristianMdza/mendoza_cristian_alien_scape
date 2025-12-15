@@ -1,9 +1,26 @@
-[gd_scene load_steps=15 format=3 uid="uid://dirydc1jhbrdb"]
+[gd_scene load_steps=20 format=3 uid="uid://dirydc1jhbrdb"]
 
 [ext_resource type="Texture2D" uid="uid://b8rri5a137hlb" path="res://assets/spritesheets/spritesheet-characters-default.png" id="1_r36ky"]
 [ext_resource type="Script" uid="uid://c6f6th35eu1tn" path="res://scripts/joueur.gd" id="1_uj1k6"]
 [ext_resource type="AudioStream" uid="uid://nyj83stk1228" path="res://assets/sounds/sfx_jump.ogg" id="3_jump"]
 [ext_resource type="AudioStream" uid="uid://5fu3l3bh6265" path="res://assets/sounds/sfx_echec_tambour_pixabay.mp3" id="4_ivebw"]
+[ext_resource type="AudioStream" uid="uid://c03jj0ak2nkbj" path="res://assets/sounds/game_creature_alien_pixabay.mp3" id="5_dga13"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0lxk"]
+atlas = ExtResource("1_r36ky")
+region = Rect2(128, 512, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87o41"]
+atlas = ExtResource("1_r36ky")
+region = Rect2(128, 640, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30ic5"]
+atlas = ExtResource("1_r36ky")
+region = Rect2(128, 512, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_viqm4"]
+atlas = ExtResource("1_r36ky")
+region = Rect2(128, 640, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ivebw"]
 atlas = ExtResource("1_r36ky")
@@ -39,6 +56,23 @@ region = Rect2(128, 384, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q5har"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0lxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87o41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30ic5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_viqm4")
+}],
+"loop": true,
+"name": &"blessure",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ivebw")
@@ -103,7 +137,9 @@ script = ExtResource("1_uj1k6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["joueur"]]
 position = Vector2(0, -64)
 sprite_frames = SubResource("SpriteFrames_q5har")
-animation = &"sauter"
+animation = &"blessure"
+frame = 2
+frame_progress = 0.85581
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["joueur"]]
 position = Vector2(-0.5, -44)
@@ -119,3 +155,6 @@ current = true
 
 [node name="MortEchecSfx" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_ivebw")
+
+[node name="BlessureSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_dga13")

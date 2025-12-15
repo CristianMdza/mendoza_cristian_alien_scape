@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://bgd2mer30cim4"]
+[gd_scene load_steps=20 format=4 uid="uid://bgd2mer30cim4"]
 
 [ext_resource type="AudioStream" uid="uid://blpwimk4s10x4" path="res://assets/musiques/musique_aventure_land_pixabay.mp3" id="1_1a1bg"]
 [ext_resource type="Texture2D" uid="uid://thw5ttmlqd4p" path="res://assets/arriere_plans/background_montagne.png" id="2_r4l43"]
@@ -8,6 +8,7 @@
 [ext_resource type="TileSet" uid="uid://cwqycux5h0q2u" path="res://assets/spritesheets/paysage_tile_set.tres" id="5_5ti7h"]
 [ext_resource type="PackedScene" uid="uid://de82iea1y2ek7" path="res://scenes/panneau_message.tscn" id="6_x3gr2"]
 [ext_resource type="PackedScene" uid="uid://dirydc1jhbrdb" path="res://scenes/joueur.tscn" id="7_6868w"]
+[ext_resource type="Script" uid="uid://ddsrq0wrobm3g" path="res://scripts/check_point_area.gd" id="8_ktbhw"]
 [ext_resource type="PackedScene" uid="uid://sfv2qrenm4yh" path="res://scenes/drapeau_victoire.tscn" id="8_lsaug"]
 [ext_resource type="Script" uid="uid://cnf4o5qr4x1by" path="res://scripts/controle_camera.gd" id="8_y0sra"]
 [ext_resource type="PackedScene" uid="uid://dscroh4yyuxie" path="res://scenes/exemples-final/hud_final.tscn" id="9_y4csj"]
@@ -19,6 +20,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_danug"]
 size = Vector2(25, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i0d10"]
+size = Vector2(64, 64)
 
 [node name="Niveau00" type="Node"]
 
@@ -56,11 +60,18 @@ tile_set = ExtResource("5_5ti7h")
 position = Vector2(512, 640)
 
 [node name="PanneauMessage" parent="PanneauxMessagesGroupe" groups=["panneaux"] instance=ExtResource("6_x3gr2")]
-message = "Bienvenue au Niveau #1 !"
+message = "👋 Bienvenue au Niveau 1 🏔 ! Explore, saute et découvre le chemin."
 
 [node name="PanneauMessage2" parent="PanneauxMessagesGroupe" groups=["panneaux"] instance=ExtResource("6_x3gr2")]
 position = Vector2(640, 0)
-message = "Prend garde de l'Abîme !"
+message = "⚠️ Attention à la Chute ! Tomber signifie recommencer au Checkpoint."
+
+[node name="CheckPointArea" type="Area2D" parent="PanneauxMessagesGroupe/PanneauMessage2"]
+script = ExtResource("8_ktbhw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PanneauxMessagesGroupe/PanneauMessage2/CheckPointArea"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_i0d10")
 
 [node name="FeuxCampsGroupe" type="Node2D" parent="."]
 

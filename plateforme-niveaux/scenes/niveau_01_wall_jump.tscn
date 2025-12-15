@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://b2686s3s4sfad"]
+[gd_scene load_steps=32 format=4 uid="uid://b2686s3s4sfad"]
 
 [ext_resource type="PackedScene" uid="uid://dscroh4yyuxie" path="res://scenes/exemples-final/hud_final.tscn" id="1_e52v2"]
 [ext_resource type="AudioStream" uid="uid://bc3241auursmg" path="res://assets/musiques/musique_eastern_spirit_pixabay.mp3" id="1_n5h22"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://dlynv50j15psb" path="res://scenes/plate_forme_horizontale.tscn" id="17_48fm7"]
 [ext_resource type="PackedScene" uid="uid://de82iea1y2ek7" path="res://scenes/panneau_message.tscn" id="19_upom3"]
 [ext_resource type="PackedScene" uid="uid://dd65fdshmk4al" path="res://scenes/escalier_bloc_bottom.tscn" id="20_a5eee"]
+[ext_resource type="Script" uid="uid://ddsrq0wrobm3g" path="res://scripts/check_point_area.gd" id="21_cdwbp"]
 [ext_resource type="PackedScene" uid="uid://c3amoeyy6kjry" path="res://scenes/escalier_bloc_center.tscn" id="21_upom3"]
 [ext_resource type="PackedScene" uid="uid://sfv2qrenm4yh" path="res://scenes/drapeau_victoire.tscn" id="22_a5eee"]
 [ext_resource type="PackedScene" uid="uid://77ax8o5svi1b" path="res://scenes/escalier_bloc_top.tscn" id="22_i0mkx"]
@@ -28,6 +29,18 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_danug"]
 size = Vector2(25, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5h22"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdwbp"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_botbj"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3m5g7"]
+size = Vector2(64, 64)
 
 [node name="Niveau01" type="Node"]
 
@@ -227,18 +240,46 @@ position = Vector2(1568, 1088)
 
 [node name="PanneauMessage" parent="PanneauxMessagesGroupe" instance=ExtResource("19_upom3")]
 position = Vector2(-1344, -256)
-message = "Bienvenue au Niveau #2 ! Attention aux Ennemis, aux Buissons, aux Cactus et aux Pièges !"
+message = "👋 Bienvenue au Niveau 2 🏜️ ! Ennemis, pièges et plantes qui piquent ! sois prudent !!"
+
+[node name="CheckPointArea" type="Area2D" parent="PanneauxMessagesGroupe/PanneauMessage"]
+script = ExtResource("21_cdwbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PanneauxMessagesGroupe/PanneauMessage/CheckPointArea"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_n5h22")
 
 [node name="PanneauMessage2" parent="PanneauxMessagesGroupe" instance=ExtResource("19_upom3")]
 position = Vector2(-862, -768)
-message = "À ta place, j'essaierais de ne pas toucher les cactus, Bonne chance !"
+message = "🌵 Les cactus font mal 😵 ! Évite-les si tu veux garder tes cœurs ❤️ ."
+
+[node name="CheckPointArea" type="Area2D" parent="PanneauxMessagesGroupe/PanneauMessage2"]
+script = ExtResource("21_cdwbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PanneauxMessagesGroupe/PanneauMessage2/CheckPointArea"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_cdwbp")
 
 [node name="PanneauMessage3" parent="PanneauxMessagesGroupe" instance=ExtResource("19_upom3")]
 position = Vector2(264, -768)
-message = "Pas si pire, hein ? Lache pas !"
+message = "💪 Pas si mal, hein ? Continue comme ça !"
+
+[node name="CheckPointArea" type="Area2D" parent="PanneauxMessagesGroupe/PanneauMessage3"]
+script = ExtResource("21_cdwbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PanneauxMessagesGroupe/PanneauMessage3/CheckPointArea"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_botbj")
 
 [node name="PanneauMessage4" parent="PanneauxMessagesGroupe" instance=ExtResource("19_upom3")]
-message = "Bravo, T'es proche au but !"
+message = "🚪 Tu y es presque ! Monte prudemment pour rejoindre la sortie."
+
+[node name="CheckPointArea" type="Area2D" parent="PanneauxMessagesGroupe/PanneauMessage4"]
+script = ExtResource("21_cdwbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PanneauxMessagesGroupe/PanneauMessage4/CheckPointArea"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_3m5g7")
 
 [node name="Joueur" parent="." instance=ExtResource("10_uqc8o")]
 position = Vector2(96, 834)

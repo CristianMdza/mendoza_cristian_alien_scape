@@ -1,16 +1,20 @@
 extends Area2D
 
+# PARAMÈTRES DE LA BOULE DE FEU
 @export var distance: float = 224.0        # 7 cases de 32px (7 * 32) : Distance du mouvement vertical.
 @export var speed: float = 1.0             # Vitesse du mouvement.
 @export var rotation_speed: float = 270.0  # Vitesse de rotation (degrés/sec).
 @export var phase_offset: float = 0.0      # Décalage pour les mouvements intercalés.
 
+# VARIABLES INTERNES
 var start_y: float
 
+# INITIALISATION
 func _ready():
 	start_y = position.y
-	connect("body_entered", Callable(self, "_on_body_entered"))
+	body_entered.connect(_on_body_entered)
 
+# MOUVEMENT & ROTATION
 func _process(delta):
 	# Rotation continue
 	rotation_degrees += rotation_speed * delta
@@ -19,6 +23,9 @@ func _process(delta):
 	var t = (Time.get_ticks_msec() / 500.0 * speed) + phase_offset
 	position.y = start_y + sin(t) * distance
 
+# DÉTECTION DE COLLISION
 func _on_body_entered(body):
-	if body.name == "Joueur":
-		body.die()  # Tue le joueur
+	# Si le corps qui entre en collision est le joueur,
+	# on lui inflige des dégâts (perte de coeur, blessure ou mort).
+	if body is Joueur:
+		body.prendre_degats() 
