@@ -1,10 +1,10 @@
 [gd_scene load_steps=43 format=3 uid="uid://xidoy6670qe"]
 
 [ext_resource type="Script" uid="uid://dtamp4bpq3p2b" path="res://scripts/menu_principal.gd" id="1_i85hu"]
-[ext_resource type="AudioStream" uid="uid://d2eapghlwa0vu" path="res://assets/musiques/space_ambient_pixabay.mp3" id="2_486ty"]
-[ext_resource type="Texture2D" uid="uid://cdlm72tkd16jh" path="res://assets/arriere_plans/foret_neige_1.png" id="2_mk4g1"]
+[ext_resource type="AudioStream" uid="uid://dc80ue4lcfwlw" path="res://assets/musiques/space_ambient_pixabay.mp3" id="2_486ty"]
+[ext_resource type="Texture2D" uid="uid://chxdd0rclkh22" path="res://assets/arriere_plans/foret_neige_1.png" id="2_mk4g1"]
 [ext_resource type="Texture2D" uid="uid://crhkoo4vld02q" path="res://assets/spritesheets/close_icon.tres" id="3_iep14"]
-[ext_resource type="AudioStream" uid="uid://dnwwja31sxtg6" path="res://assets/sounds/ui_mouse_click_pixabay.mp3" id="3_w5ui5"]
+[ext_resource type="AudioStream" uid="uid://pxh3nwnb4ky5" path="res://assets/sounds/ui_mouse_click_pixabay.mp3" id="3_w5ui5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u72up"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
