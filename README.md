@@ -47,17 +47,17 @@ J’ai effectué un **fork** du projet original afin de le modifier, d’y ajout
   - etc.
 - **Textures et palettes de couleurs** adaptées à l’ambiance de chaque niveau
 - Ajout de **musique et d’effets sonores** selon les événements (blessure, mort, victoire, exploration)
-- Ajout d’un **HUD**, d’un panneau **d’instructions**, d’un bouton **Pause** et d’un bouton **Continuer**
+- Ajout d’un **HUD**, d’un panneau **d’instructions**, d’un bouton **Pause**, d’un bouton **Continuer** et d’un bouton **Quitter** dans le menu contrôle. 
 
 ---
 
 ## Système de vies et de mort
 
-Le jeu utilise un **système de vies par cœurs**, inspiré des jeux de plateforme classiques.
+Le jeu utilise un **système de vies par coeurs**, inspiré des jeux de plateforme classiques.
 
-- Le joueur commence chaque niveau avec **3 cœurs de vie**.
+- Le joueur commence chaque niveau avec **3 coeurs de vie**.
 - Lorsqu’il entre en contact avec un **danger** (ennemis, scies, blocs à pointes, cactus, buissons, boules de feu, vagues d’eau dangereuses, etc.) :
-  - Le joueur perd **1 cœur**
+  - Le joueur perd **1 coeur**
   - Une **animation de blessure** est jouée
   - Le joueur devient **temporairement invincible** (effet de clignotement) afin d’éviter les dégâts consécutifs
   - Le joueur est **ramené au dernier point de contrôle (checkpoint)**
