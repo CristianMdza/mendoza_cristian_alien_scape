@@ -80,7 +80,7 @@ Ce système permet de maintenir un bon **équilibre entre difficulté et accessi
 
 Le jeu intègre un **système de collecte de monnaies** qui influence la survie du joueur et le score final.
 
-- Chaque niveau contient **5 monnaies**, pour un total de **15 monnaies** sur l’ensemble du jeu.
+- Le niveau 1 contient **3 monnaies** et les deux autres contiennent **6 monnaies** chacun, pour un total de **15 monnaies** sur l’ensemble du jeu.
 - Chaque fois que le joueur collecte **5 monnaies**, il obtient **1 cœur supplémentaire** (vie bonus).
 - À la fin du jeu (après les 3 niveaux), un **score en pourcentage** est attribué selon le nombre total de monnaies ramassées :
 
@@ -92,7 +92,7 @@ Ce système encourage l’exploration complète des niveaux et récompense les j
 
 ---
 
-## Palette de couleurs des menus
+## Palette de couleurs des Menus
 
 ### Palette utilisée pour le **menu principal** et le **menu de pause**
 
