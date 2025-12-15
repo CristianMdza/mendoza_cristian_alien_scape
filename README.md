@@ -1,9 +1,9 @@
-# Alien👽Escape
+# Alien 👽 Escape
 
 **Projet-exemple de jeu de plateforme 2D** réalisé en Godot pour le cours *Interactivité Ludique*, Automne 2025, Collège Montmorency.  
 
 Petit jeu où un **alien** explore plusieurs mondes (forêt montagneuse, temple souterrain/désert, monde glacial) remplis d’obstacles, d’ennemis, de pièges et d’objets à ramasser.  
-Le but : **atteindre la porte finale de chaque niveau**, **collecter un maximum de monnaies** et trouver la **clé du dernier niveau** afin d’ouvrir la porte finale et terminer le jeu au complet.
+Le but est **d’atteindre la porte finale de chaque niveau**, de **collecter un maximum de monnaies** et de trouver la **clé du dernier niveau** afin d’ouvrir la porte finale et terminer le jeu au complet.
 
 ---
 
@@ -12,7 +12,8 @@ Le but : **atteindre la porte finale de chaque niveau**, **collecter un maximum 
 - [Modifications apportées](#modifications-apportées)
 - [Système de vies et de mort](#système-de-vies-et-de-mort)
 - [Système de monnaies et score](#système-de-monnaies-et-score)
-- [Contrôles du Jeu](#contrôles-du-jeu)
+- [Palette de couleurs des menus](#palette-de-couleurs-des-menus)
+- [Contrôles du jeu](#contrôles-du-jeu)
 - [Crédits](#crédits)
 - [Licence](#licence)
 
@@ -27,25 +28,25 @@ J’ai effectué un **fork** du projet original afin de le modifier, d’y ajout
 
 ## Modifications apportées
 
-- Création de **3 nouveaux niveaux** :  
+- Création de **3 nouveaux niveaux** :
   - Forêt montagneuse (niveau 1)
   - Temple souterrain / désert (niveau 2)
   - Monde glacial et enneigé (niveau 3)
 - Nouveau **personnage alien violet** avec animations complètes  
-- Ajout de mécaniques et d’éléments de gameplay :  
-  - Zones mortelles (abîmes, eau dangereuse, chutes)  
-  - Escaliers interactifs  
-  - Portes de niveaux  
-  - Panneaux de messages informatifs  
-  - Pièges normaux et animés (scies, pointes, vagues, boules de feu, etc.)  
-  - Ascenseurs et plateformes mobiles  
-  - Trampolines  
-  - Objets à ramasser (monnaies, cœurs, clé)  
-  - Objets sonores et pièges  
-  - Ennemis  
-  - etc...  
-- **Textures et palettes de couleurs** adaptées à l’ambiance de chaque niveau  
-- Ajout de **musique et d’effets sonores** selon les événements (blessure, mort, victoire, exploration)  
+- Ajout de mécaniques et d’éléments de gameplay :
+  - Zones mortelles (chutes, vagues et laves dangereuses)
+  - Escaliers interactifs
+  - Portes de niveaux
+  - Panneaux de messages informatifs
+  - Pièges normaux et animés (scies, pointes, vagues, boules de feu, etc.)
+  - Ascenseurs et plateformes mobiles
+  - Trampolines
+  - Objets à ramasser (monnaies, cœurs, clé)
+  - Objets sonores et pièges
+  - Ennemis
+  - etc.
+- **Textures et palettes de couleurs** adaptées à l’ambiance de chaque niveau
+- Ajout de **musique et d’effets sonores** selon les événements (blessure, mort, victoire, exploration)
 - Ajout d’un **HUD**, d’un panneau **d’instructions**, d’un bouton **Pause** et d’un bouton **Continuer**
 
 ---
@@ -85,21 +86,47 @@ Le jeu intègre un **système de collecte de monnaies** qui influence la survie 
 
   - **15 / 15 monnaies** → **Score : 100 %**
   - Sinon, le score correspond au pourcentage de monnaies collectées  
-    *(exemple : 12/15 = 80 %)*
+    *(exemple : 12 / 15 = 80 %)*
 
 Ce système encourage l’exploration complète des niveaux et récompense les joueurs attentifs et persévérants.
 
 ---
 
-## Contrôles du Jeu
+## Palette de couleurs des menus
+
+### Palette utilisée pour le **menu principal** et le **menu de pause**
+
+#### 🎨 Couleurs de base
+- **Brun pâle** : `#c19e86` — fond du menu  
+- **Brun normal** : `#6f4b3e` — bordures  
+- **Blanc** : `#ffffff` — texte  
+- **Noir** : `#000000` — contour du texte  
+
+#### 🖱️ Hover
+- **Brun pâle foncé** : `#a77e61` — fond  
+- **Brun foncé** : `#5b3c31` — bordure  
+
+#### 🔲 Focus
+- **Transparent** : `#99999900` — fond  
+- **Blanc** : `#ffffff` — bordure  
+
+#### 🔘 Pressed
+- **Brun / jaune** : `#c27729` — fond  
+- **Brun très foncé** : `#331f18` — bordure  
+
+Cette palette a été choisie pour offrir une **interface chaleureuse**, lisible et cohérente avec l’univers visuel du jeu.
+
+---
+
+## Contrôles du jeu
 
 | Action                 | Touche      |
 |------------------------|------------|
 | Marcher à droite       | → / D      |
 | Marcher à gauche       | ← / A      |
 | Sauter                 | Espace     |
-| Monter (Échelle)       | ↑ / W      |
-| Descendre (Échelle)    | ↓ / S      |
+| Monter (échelle)       | ↑ / W      |
+| Descendre (échelle)    | ↓ / S      |
 | Mettre le jeu en pause | Échap      |
 
 ---
