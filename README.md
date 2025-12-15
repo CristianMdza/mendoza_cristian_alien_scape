@@ -7,7 +7,7 @@ Le but est **d’atteindre la porte finale de chaque niveau**, de **collecter un
 
 ---
 
-## Sommaire
+## 🚀 Sommaire
 - [Contexte](#contexte)
 - [Modifications apportées](#modifications-apportées)
 - [Système de vies et de mort](#système-de-vies-et-de-mort)
@@ -19,14 +19,14 @@ Le but est **d’atteindre la porte finale de chaque niveau**, de **collecter un
 
 ---
 
-## Contexte
+## 📖 Contexte
 
 Projet basé sur un jeu créé par **Enric Granzotto Llagostera** dans le cadre du cours *Interactivité Ludique* au **Collège Montmorency**.  
 J’ai effectué un **fork** du projet original afin de le modifier, d’y ajouter de nouvelles mécaniques et de lui donner une nouvelle ambiance visuelle et ludique.
 
 ---
 
-## Modifications apportées
+## ✨ Modifications apportées
 
 - Création de **3 nouveaux niveaux** :
   - Forêt montagneuse (niveau 1)
@@ -51,7 +51,7 @@ J’ai effectué un **fork** du projet original afin de le modifier, d’y ajout
 
 ---
 
-## Système de vies et de mort
+## ❤️ Système de vies et de mort
 
 Le jeu utilise un **système de vies par "coeurs"**, inspiré des jeux de plateforme classiques.
 
@@ -76,7 +76,7 @@ Ce système permet de maintenir un bon **équilibre entre difficulté et accessi
 
 ---
 
-## Système de monnaies et score
+## 🪙 Système de monnaies et score
 
 Le jeu intègre un **système de collecte de monnaies** qui influence la survie du joueur et le score final.
 
@@ -92,11 +92,11 @@ Ce système encourage l’exploration complète des niveaux et récompense les j
 
 ---
 
-## Palette de couleurs des Menus
+## 🎨 Palette de couleurs des menus
 
 ### Palette utilisée pour le **menu principal** et le **menu de pause**
 
-#### 🎨 Couleurs de base
+#### 🫟 Couleurs de base
 - **Brun pâle** : `#c19e86` — fond du menu  
 - **Brun normal** : `#6f4b3e` — bordures  
 - **Blanc** : `#ffffff` — texte  
@@ -118,7 +118,7 @@ Cette palette a été choisie pour offrir une **interface chaleureuse**, lisible
 
 ---
 
-## Contrôles du jeu
+## 🎮 Contrôles du jeu
 
 | Action                 | Touche      |
 |------------------------|------------|
@@ -131,7 +131,7 @@ Cette palette a été choisie pour offrir une **interface chaleureuse**, lisible
 
 ---
 
-## Crédits
+## 🎬 Crédits
 
 - **Jeu original :** Enric Granzotto Llagostera – Cégep Édouard-Montpetit & Collège Montmorency  
 - **Version modifiée par :** Cristian Mendoza – Collège Montmorency  
@@ -147,6 +147,6 @@ Cette palette a été choisie pour offrir une **interface chaleureuse**, lisible
 
 ---
 
-## Licence
+## 📜 Licence
 
 Projet à usage **pédagogique** (non commercial).
