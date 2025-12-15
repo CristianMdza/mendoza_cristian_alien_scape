@@ -9,12 +9,12 @@ Le but est **d’atteindre la porte finale de chaque niveau**, de **collecter un
 
 ## 🚀 Sommaire
 - [Contexte](#contexte)
-- [Modifications apportées](#modifications-apportées)
-- [Système de vies et de mort](#système-de-vies-et-de-mort)
-- [Système de monnaies et score](#système-de-monnaies-et-score)
+- [Modifications apportées](#modifications-apportees)
+- [Système de vies et de mort](#systeme-de-vies-et-de-mort)
+- [Système de monnaies et score](#systeme-de-monnaies-et-score)
 - [Palette de couleurs des menus](#palette-de-couleurs-des-menus)
-- [Contrôles du jeu](#contrôles-du-jeu)
-- [Crédits](#crédits)
+- [Contrôles du jeu](#controles-du-jeu)
+- [Crédits](#credits)
 - [Licence](#licence)
 
 ---
