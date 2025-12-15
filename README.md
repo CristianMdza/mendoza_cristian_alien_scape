@@ -53,10 +53,10 @@ J’ai effectué un **fork** du projet original afin de le modifier, d’y ajout
 
 ## Système de vies et de mort
 
-Le jeu utilise un **système de vies par coeurs**, inspiré des jeux de plateforme classiques.
+Le jeu utilise un **système de vies par "coeurs"**, inspiré des jeux de plateforme classiques.
 
 - Le joueur commence chaque niveau avec **3 coeurs de vie**.
-- Lorsqu’il entre en contact avec un **danger** (ennemis, scies, blocs à pointes, cactus, buissons, boules de feu, vagues d’eau dangereuses, etc.) :
+- Lorsqu’il entre en contact avec un **danger** (ennemis, scies, blocs à pointes, cactus, arbustes, boules de feu, vagues d’eau et de lave dangereuses, etc.) :
   - Le joueur perd **1 coeur**
   - Une **animation de blessure** est jouée
   - Le joueur devient **temporairement invincible** (effet de clignotement) afin d’éviter les dégâts consécutifs
