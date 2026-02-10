@@ -141,8 +141,7 @@ Cette palette a été choisie pour offrir une **interface chaleureuse**, lisible
   - opengameart.org
   - sfxr.me
   - pixabay.com  
-- **Sprites et spritesheets :** Projet et jeu original  
-- **Paquets de ressources visuelles :** *New Platformer Pack*, par Kenney  
+- **Sprites et spritesheets :** *New Platformer Pack*, par Kenney  
   ([https://kenney.nl/assets/new-platformer-pack](https://kenney.nl/assets/new-platformer-pack))
 
 ---
