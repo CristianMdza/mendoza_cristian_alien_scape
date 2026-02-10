@@ -143,6 +143,8 @@ Cette palette a été choisie pour offrir une **interface chaleureuse**, lisible
   - pixabay.com  
 - **Sprites et spritesheets :** *New Platformer Pack*, par Kenney  
   ([https://kenney.nl/assets/new-platformer-pack](https://kenney.nl/assets/new-platformer-pack))
+- **UI Icônes :** *Game Icons Pack*, par Kenney  
+  ([https://kenney.nl/assets/game-icons](https://kenney.nl/assets/game-icons))
 
 ---
 
