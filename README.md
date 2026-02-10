@@ -5,6 +5,9 @@
 Petit jeu où un **alien** explore plusieurs mondes (forêt montagneuse, temple souterrain/désert, monde glacial) remplis d’obstacles, d’ennemis, de pièges et d’objets à ramasser.  
 Le but est **d’atteindre la porte finale de chaque niveau**, de **collecter un maximum de monnaies** et de trouver la **clé du dernier niveau** afin d’ouvrir la porte finale et terminer le jeu au complet.
 
+## Lien jouable en ligne :
+🔗 https://cristianmdza.github.io/mendoza_cristian_alien_scape/
+
 ---
 
 ## 🚀 Sommaire
